@@ -50,29 +50,4 @@ post '/contacts' do
   erb :contacts
 end
 
-=begin
 
-
-post '/admin' do
-	@login = params[:aaa]
-	@password = params[:bbb]
-
-	if @login == 'admin' && @password == 'secret'
-		@message_a = ""
-		@t = []
-		fil = File.open("user.txt","r")
-		while (line = fil.gets)
-			@t << line
-		end
-		fil.close
-		erb :admin_info
-
-	elsif @login == 'admin'
-		@message_a = "You admin but password not right"
-		erb :admin
-	else
-		@message_a = "Login ore password not correct."
-		erb :admin
-	end
-end
-=end
