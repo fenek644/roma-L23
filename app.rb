@@ -26,22 +26,16 @@ post '/visit' do
 
   @master = params[:master]
 
-  @title = "Thank you!"
-  @message = "Dear #{@user_name}, we'll waiting for you  #{@date_time}"
-
   f = File.open './public/user.txt', 'a'
   f.puts "User: #{@user_name}, Phone: #{@phone}, Date and Time: #{@date_time} . Ваш мастер - #{@master}. "
   f.close
 
-  erb :visit
+  erb "OK #{@user_name}; вы записаны на #{@date_time}; ваш мастер #{@master}"
 end
 
 post '/contacts' do
   @email = params[:email]
   @message = params[:message]
-
-  # @title = "Thank you!"
-  # @message = "Dear #{@user_name}, we'll waiting for you  #{@date_time}"
 
   f = File.open './public/contacts.txt', 'a'
   f.puts "email: #{@email}, Сообщение: #{@message}. "
