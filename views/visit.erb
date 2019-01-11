@@ -5,20 +5,20 @@
 <form action="/visit" method="POST">
   <div class="form-group">
     <label for="exampleInputEmail1">Ваше имя</label>
-    <input name="username" type="text" class="form-control"  placeholder="Введите имя">
+    <input name="username" type="text" class="form-control probe"  placeholder="Введите имя">
   </div>
   <div class="form-group">
     <label for="exampleInputEmail1">Ваш телефон</label>
-    <input name="phone" type="text" class="form-control"  placeholder="Введите телефон">
+    <input name="phone" type="text" class="form-control  probe"  placeholder="Введите телефон">
   </div>
   <div class="form-group">
     <label for="exampleInputEmail1">Когда вас ждать</label>
-    <input name="date_time" type="text" class="form-control"  placeholder="Введите дату и время">
+    <input id="ind" name="date_time" type="text" class="form-control"  placeholder="Введите дату и время">
   </div>
 
   <div class="form-group">
     <label for="exampleInputEmail1" >Выберите мастера</label>
-    <select name="master" class="form-control" >
+    <select id="select" name="master" class="form-control" >
 <!--      <option></option>-->
       <option>Walter White</option>
       <option>Jessie Pickman</option>
@@ -31,3 +31,10 @@
 </form>
 
 </select>
+
+<script type="text/javascript">
+  $('#ind').css('background-color', 'yellow');
+  $('#select').css('background-color', 'red');
+  $('#select').css( 'color', 'white');
+  $('.probe').css( 'background-color', 'blue');
+</script>
