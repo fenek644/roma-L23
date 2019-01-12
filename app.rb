@@ -25,12 +25,13 @@ post '/visit' do
   @date_time = params[:date_time]
 
   @master = params[:master]
+  @color = params[:colorpicker]
 
   f = File.open './public/user.txt', 'a'
   f.puts "User: #{@user_name}, Phone: #{@phone}, Date and Time: #{@date_time} . Ваш мастер - #{@master}. "
   f.close
 
-  erb "OK #{@user_name}; вы записаны на #{@date_time}; ваш мастер #{@master}"
+  erb "OK #{@user_name}; вы записаны на #{@date_time}; ваш мастер #{@master}; выбранный цвет #{@color}"
 end
 
 post '/contacts' do
