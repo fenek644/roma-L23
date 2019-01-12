@@ -31,7 +31,8 @@ post '/visit' do
   f.puts "User: #{@user_name}, Phone: #{@phone}, Date and Time: #{@date_time} . Ваш мастер - #{@master}. "
   f.close
 
-  erb "OK #{@user_name}; вы записаны на #{@date_time}; ваш мастер #{@master}; выбранный цвет #{@color}"
+  erb :visit_mess
+  # erb "OK #{@user_name}; вы записаны на #{@date_time}; ваш мастер #{@master}; выбранный цвет #{@color}"
 end
 
 post '/contacts' do
